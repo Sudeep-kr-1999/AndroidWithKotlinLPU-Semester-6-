@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="sudeep.example.androidapplication">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AndroidApplication">
+        <activity android:name=".ProgressBarExample">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ToolBarExampleTwo"
+            android:theme="@style/Theme.AndroidApplication.NoActionBar"/>
+        <activity
+            android:name=".ToolBarExample"
+            android:theme="@style/Theme.AndroidApplication.NoActionBar" />
+        <activity android:name=".RatingBarAverageExample" />
+        <activity android:name=".RatingBarExample" />
+        <activity android:name=".SplashScreenExampleMain" />
+        <activity android:name=".SplashScreenExample" />
+        <activity android:name=".ScrollViewExample" />
+        <activity android:name=".MainActivity" />
+    </application>
+
+</manifest>

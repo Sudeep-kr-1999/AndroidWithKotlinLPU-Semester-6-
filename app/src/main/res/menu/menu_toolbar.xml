@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ToolBarExample">
+
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        android:title="Setting"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/action_email"
+        android:orderInCategory="200"
+        android:icon="@drawable/ic_baseline_email_24"
+        android:title="Email"
+        app:showAsAction="always"/>
+    <item
+        android:id="@+id/action_add"
+        android:orderInCategory="300"
+        android:title="User"
+        android:icon="@drawable/ic_baseline_add_24"
+        app:showAsAction="never"/>
+
+</menu>
