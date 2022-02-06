@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="sudeep.example.androidapplication">
 
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,14 +12,29 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidApplication">
-        <activity android:name=".EditTextProgressBarExample">
+        <activity
+            android:name=".AlarmManagerExample"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ProgressBarExample"/>
+
+        <activity
+            android:name=".BottomNavBarExample"
+            android:exported="true" />
+        <activity
+            android:name=".MediaPlayerExample"
+            android:exported="true" />
+        <activity
+            android:name=".CustomToastExample"
+            android:exported="true" />
+        <activity
+            android:name=".EditTextProgressBarExample"
+            android:exported="true" />
+        <activity android:name=".ProgressBarExample" />
         <activity
             android:name=".ToolBarExampleTwo"
             android:theme="@style/Theme.AndroidApplication.NoActionBar" />
@@ -29,6 +47,11 @@
         <activity android:name=".SplashScreenExample" />
         <activity android:name=".ScrollViewExample" />
         <activity android:name=".MainActivity" />
+
+        <!--     VVI Note :  it will broadcast the pending intent to whole the
+        android environment that it will work after certain time
+          it should be added after all the activity and before the closing of the application tag -->
+        <receiver android:name=".AlarmManagerBroadcast" />
     </application>
 
 </manifest>
