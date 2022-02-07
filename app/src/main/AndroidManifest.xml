@@ -13,7 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidApplication">
         <activity
-            android:name=".AlarmManagerExample"
+            android:name=".JobSchedulerExample"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,7 +21,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
+        <activity
+            android:name=".AlarmManagerExample"
+            android:exported="true"/>
         <activity
             android:name=".BottomNavBarExample"
             android:exported="true" />
@@ -47,11 +49,18 @@
         <activity android:name=".SplashScreenExample" />
         <activity android:name=".ScrollViewExample" />
         <activity android:name=".MainActivity" />
-
-        <!--     VVI Note :  it will broadcast the pending intent to whole the
+        <!--
+     VVI Note :  it will broadcast the pending intent to whole the
         android environment that it will work after certain time
-          it should be added after all the activity and before the closing of the application tag -->
+          it should be added after all the activity and before the closing of the application tag
+        -->
         <receiver android:name=".AlarmManagerBroadcast" />
+
+<!--        It allow you to bind the current job service of job scheduler to the android environment-->
+        <service
+            android:name=".MyJobService"
+            android:exported="true"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
     </application>
 
 </manifest>
