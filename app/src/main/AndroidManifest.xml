@@ -13,7 +13,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidApplication">
         <activity
-            android:name=".JobSchedulerExample"
+            android:name=".NotificationViewExample"
+            android:exported="true"/>
+        <activity
+            android:name=".NotificationManagerExample"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,8 +25,11 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".AlarmManagerExample"
+            android:name=".JobSchedulerExample"
             android:exported="true"/>
+        <activity
+            android:name=".AlarmManagerExample"
+            android:exported="true" />
         <activity
             android:name=".BottomNavBarExample"
             android:exported="true" />
@@ -54,9 +60,7 @@
         android environment that it will work after certain time
           it should be added after all the activity and before the closing of the application tag
         -->
-        <receiver android:name=".AlarmManagerBroadcast" />
-
-<!--        It allow you to bind the current job service of job scheduler to the android environment-->
+        <receiver android:name=".AlarmManagerBroadcast" /> <!-- It allow you to bind the current job service of job scheduler to the android environment -->
         <service
             android:name=".MyJobService"
             android:exported="true"
