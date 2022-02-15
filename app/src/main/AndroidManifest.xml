@@ -13,10 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidApplication">
         <activity
-            android:name=".NotificationViewExample"
-            android:exported="true"/>
-        <activity
-            android:name=".NotificationManagerExample"
+            android:name=".DateTimePickerExample"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -25,8 +22,14 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".JobSchedulerExample"
+            android:name=".NotificationViewExample"
+            android:exported="true" />
+        <activity
+            android:name=".NotificationManagerExample"
             android:exported="true"/>
+        <activity
+            android:name=".JobSchedulerExample"
+            android:exported="true" />
         <activity
             android:name=".AlarmManagerExample"
             android:exported="true" />
