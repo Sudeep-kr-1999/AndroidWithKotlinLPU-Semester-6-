@@ -48,10 +48,10 @@
         android:numStars="5"
         android:paddingLeft="5dp"
         android:paddingRight="5dp"
-        android:secondaryProgressTint="#D63333"
-        android:progressTint="#D63333"
         android:progressBackgroundTint="#F4E0E0"
+        android:progressTint="#D63333"
         android:rating="1.5"
+        android:secondaryProgressTint="#D63333"
         android:stepSize="0.5" />
 
     <TextView
